@@ -78,7 +78,10 @@ function DashboardSettings() {
             title="Reset all demo data?"
             description="Your changes are discarded and the original sample content is restored. This cannot be undone."
             confirmLabel="Reset demo"
-            onConfirm={() => window.location.reload()}
+            onConfirm={() => {
+              resetDemo();
+              window.location.reload();
+            }}
           />
         </div>
       </SectionCard>
