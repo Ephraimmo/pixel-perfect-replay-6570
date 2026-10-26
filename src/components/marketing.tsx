@@ -73,7 +73,7 @@ export function MarketingFooter() {
         </div>
         <div>
           <p className="eyebrow">Sample gallery</p>
-          <Link to="/g/$shareSlug" params={{ shareSlug: "harper-vows-at-ashford" }} className="mt-3 block">
+          <Link to="/g/$shareSlug" params={{ shareSlug: "mokoena-getting-ready" }} className="mt-3 block">
             <img src={photo("pixora-footer", 320, 200)} alt="Sample gallery cover" className="photo-card aspect-[8/5] w-full object-cover" loading="lazy" />
           </Link>
         </div>
