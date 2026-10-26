@@ -75,7 +75,7 @@ function Breadcrumbs() {
       <BreadcrumbList>
         {crumbs.map((crumb, i) => {
           const last = i === crumbs.length - 1;
-          const isId = !segmentLabels[parts[i]];
+          const isId = !segmentLabels[part];
           return (
             <BreadcrumbItem key={crumb.href}>
               {last ? (
