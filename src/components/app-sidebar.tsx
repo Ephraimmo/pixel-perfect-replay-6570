@@ -97,9 +97,8 @@ export function AppSidebar() {
 
       <SidebarContent>
         {groups.map((group) => {
-          const expanded = group.items.some((item) => isActive(item.url));
           return (
-            <SidebarGroup key={group.label} defaultOpen={expanded}>
+            <SidebarGroup key={group.label}>
               <SidebarGroupLabel>{group.label}</SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
