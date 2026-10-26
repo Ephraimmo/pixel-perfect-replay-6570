@@ -286,14 +286,14 @@ const tagsFor = (i: number): string[] => {
     ["portrait", "golden hour"],
     ["candid", "family"],
   ];
-  return pool[i % pool.length];
+  return pool[i % pool.length] ?? pool[0] ?? [];
 };
 
 function makePhotos(gid: string, count: number, offset = 0): GalleryPhoto[] {
   return Array.from({ length: count }, (_, i) => ({
     id: `${gid}-p${i + 1}`,
     seed: `pixora-${gid}-${i + 1 + offset}`,
-    caption: captions[(i + offset) % captions.length],
+    caption: captions[(i + offset) % captions.length] ?? "Untitled frame",
     tags: tagsFor(i + offset),
     favorite: i % 7 === 3,
   }));
@@ -637,4 +637,3 @@ function seedState(): DemoState {
 }
 
 export { seedState };
-export type { DemoState };
